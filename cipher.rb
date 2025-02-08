@@ -1,44 +1,3 @@
-# def caesar_cipher(the_string, shift)
-  
-#   alphabets = ('a'..'z').to_a
-#   numbers = (1..26).to_a
-
-#   full_list = alphabets.zip(numbers).to_h
-#   new_array = []
-  
-#   new_string = the_string.downcase.delete(" \t\r\n").chars
-
-#   if the_string.is_a?(String)
-
-#     for ele in new_string
-#       new_shift = shift + full_list[ele]
-    
-#       # Check if new_shift is positive
-#       if new_shift > 0
-#         until new_shift.between?(1,26)
-#           new_shift -= 26
-#         end
-#         new_array.append(full_list.key(new_shift))
-
-#       # Check if new_shift is negative
-#       elsif new_shift < 0
-#         until new_shift.between?(1,26)
-#           new_shift += 26
-#         end
-#         new_array.append(full_list.key(new_shift))
-#       end
-
-#     end  # Closes the for loop
-
-#   else 
-#     return "Not a string!"
-#   end
-
-#   return new_array.join("")  # Ensure the function returns the result
-# end
-
-
-
 def caesar_cipher(the_string, shift)
   
   alphabets = ('a'..'z').to_a
@@ -100,7 +59,5 @@ def caesar_cipher(the_string, shift)
   return new_array.join("")  # ✅ Ensure function returns the result
 end
 
-# Test cases
-puts caesar_cipher("What a string!", 5) 
 
 
