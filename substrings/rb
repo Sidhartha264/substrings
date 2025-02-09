@@ -1,0 +1,16 @@
+def substrings(da_string, dictionary)
+  emp_word_array = []
+  emp_count_array = []
+
+  for ele in dictionary
+    counter = da_string.downcase.scan(ele).count  
+
+    if counter > 0
+      emp_word_array.append(ele)
+      emp_count_array.append(counter)
+    end
+  end
+
+  final_hash = emp_word_array.zip(emp_count_array).to_h  
+  puts final_hash
+end
